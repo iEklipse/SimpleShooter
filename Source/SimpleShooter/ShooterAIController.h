@@ -15,18 +15,13 @@ class SIMPLESHOOTER_API AShooterAIController : public AAIController
 	GENERATED_BODY()
 
 public:
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	bool IsDead() const;
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 private:
-
-	//UPROPERTY(EditAnywhere)
-	//float AcceptanceRadius = 200.f;
-
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
 
